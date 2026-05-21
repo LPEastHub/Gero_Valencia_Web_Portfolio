@@ -21,46 +21,47 @@
     const recaptchaToken = ref('');
 
     const submitForm = async () => {
-        if (!recaptchaToken.value) {
-            notyf.error('Please verify that you are not a robot.');
-            return;
-        }
-
-        isLoading.value = true;
-
-        try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json"
-                },
-                body: JSON.stringify({
-                    access_key: WEB3FORMS_ACCESS_KEY,
-                    subject: subject.value,
-                    email: email.value,
-                    message: message.value,
-                    "g-recaptcha-response": recaptchaToken.value // Passes token verification to Web3Forms
-                })
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                notyf.success("Message sent successfully!");
-                clearForm();
-            } else {
-                notyf.error(result.message || "Failed to send message.");
-            }
-
-        } catch (error) {
-            console.error(error);
-            notyf.error("Failed to send message");
-        } finally {
-            isLoading.value = false;
-            resetRecaptcha();
-        }
+    if (!recaptchaToken.value) {
+        notyf.error('Please verify that you are not a robot.');
+        return;
     }
+
+    isLoading.value = true;
+
+    try {
+        // Use FormData instead of a JSON object
+        const formData = new FormData();
+        formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+        formData.append("subject", subject.value);
+        formData.append("email", email.value);
+        formData.append("message", message.value);
+        formData.append("g-recaptcha-response", recaptchaToken.value);
+
+        // Send the FormData directly
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData 
+            // IMPORTANT: Do NOT include 'Content-Type' headers here. 
+            // The browser will automatically set it to 'multipart/form-data' with the correct boundary.
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            notyf.success("Message sent successfully!");
+            clearForm();
+        } else {
+            notyf.error(result.message || "Failed to send message.");
+        }
+
+    } catch (error) {
+        console.error(error);
+        notyf.error("Failed to send message");
+    } finally {
+        isLoading.value = false;
+        resetRecaptcha();
+    }
+}
 
     const clearForm = () => {
         email.value = "";
