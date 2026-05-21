@@ -6,7 +6,7 @@
     const notyf = new Notyf();
 
     // Credentials
-    const WEB3FORMS_ACCESS_KEY = "76f2c8b7-9af0-4626-9dbc-6fa605e309d7";
+    const WEB3FORMS_ACCESS_KEY = "bca38c84-8560-4e70-9d6c-9060b0d58a7a";
     const SITE_KEY = '6LcOI_UsAAAAAL1Z5e2Udt1OIIS1pvJmSCJcK-pm';
 
     // Form State
@@ -61,7 +61,7 @@
         isLoading.value = false;
         resetRecaptcha();
     }
-}
+    }
 
     const clearForm = () => {
         email.value = "";
