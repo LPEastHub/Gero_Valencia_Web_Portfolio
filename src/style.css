@@ -1,0 +1,303 @@
+/* Color Palette Variables (from original configuration) */
+:root {
+    --primary-custom: #0001bb;
+    --secondary-custom: #a900a9;
+    --surface-dim: #dadada;
+    --surface-container: #eeeeee;
+    --surface-container-low: #f4f3f3;
+    --surface-container-high: #e8e8e8;
+    --on-surface: #1a1c1c;
+    --text-dark: #1a1c1c;
+    --bg-teal: #008080;
+    --border-light: #ffffff;
+    --border-dark: #808080;
+    --border-darker: #4d4d4d;
+}
+
+/* Base Body Styles */
+body.custom-bg {
+    background-color: var(--bg-teal);
+    background-image: radial-gradient(var(--border-darker) 0.5px, transparent 0.5px);
+    background-size: 10px 10px;
+}
+
+body.custom-text {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--on-surface);
+}
+
+/* Typography Helpers */
+.font-headline {
+    font-family: 'Newsreader', serif;
+}
+
+.font-body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-primary-custom {
+    color: var(--primary-custom) !important;
+}
+
+.text-secondary-custom {
+    color: var(--secondary-custom) !important;
+}
+
+/* Material Icons */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Windows 95 Retro UI Utilities */
+.beveled-out {
+    border-top: 2px solid var(--border-light);
+    border-left: 2px solid var(--border-light);
+    border-right: 2px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
+}
+
+.beveled-in {
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.bg-surface-dim {
+    background-color: var(--surface-dim);
+}
+
+.bg-surface-container {
+    background-color: var(--surface-container);
+}
+
+.bg-surface-container-high {
+    background-color: var(--surface-container-high);
+}
+
+.bg-surface-container-low {
+    background-color: var(--surface-container-low);
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-custom);
+}
+
+.border-double {
+    border: 4px double var(--primary-custom);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Specific Component Styles */
+.retro-header {
+    background-color: var(--surface-dim);
+    border-bottom: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-dark);
+    border-top: 2px solid var(--border-light);
+    border-left: 2px solid var(--border-light);
+    box-shadow: inset 1px 1px 0px var(--border-light);
+    height: 3rem;
+}
+
+.header-height {
+    height: 48px;
+}
+
+/* Navbar Links */
+.nav-link-retro {
+    color: #4a4a4a;
+    transition: none;
+}
+
+.nav-link-retro:hover {
+    background-color: var(--primary-custom);
+    color: #ffffff;
+}
+
+.nav-link-retro:active {
+    transform: translate(1px, 1px);
+}
+
+.nav-link-active {
+    color: var(--primary-custom);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.nav-link-active:hover {
+    background-color: var(--primary-custom);
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* Retro Buttons */
+.retro-btn {
+    background-color: var(--surface-dim);
+    color: var(--text-dark);
+    border-top: 2px solid var(--border-light);
+    border-left: 2px solid var(--border-light);
+    border-right: 2px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
+    outline: none;
+    cursor: pointer;
+}
+
+.retro-btn:active {
+    transform: translate(1px, 1px);
+    border-top: 2px solid var(--border-dark);
+    border-left: 2px solid var(--border-dark);
+    border-right: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.retro-btn:hover {
+    background-color: var(--primary-custom);
+    color: #ffffff;
+}
+
+/* Window Controls (Min, Max, Close) */
+.window-control {
+    width: 16px;
+    height: 16px;
+    background-color: var(--surface-dim);
+    border-top: 2px solid var(--border-light);
+    border-left: 2px solid var(--border-light);
+    border-right: 2px solid var(--border-dark);
+    border-bottom: 2px solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* Form Controls */
+.form-control-retro {
+    width: 100%;
+    background-color: white;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.form-control-retro:focus {
+    outline: 1px solid var(--primary-custom);
+}
+
+/* Project Cards Specifics */
+.project-img-container {
+    height: 7rem;
+}
+
+.project-desc {
+    font-size: 11px;
+    line-height: 1.2;
+    color: var(--on-surface);
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .project-offset-md {
+        transform: translateY(1rem);
+    }
+    .project-offset-md-up {
+        transform: translateY(-1rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .project-offset-lg {
+        transform: translateY(2rem);
+    }
+}
+
+/* Hero Section Specifics */
+.hero-img-container {
+    width: 12rem;
+    height: 12rem;
+}
+
+@media (min-width: 768px) {
+    .hero-img-container {
+        width: 16rem;
+        height: 16rem;
+    }
+}
+
+/* Tool Badges */
+.tool-badge {
+    background-color: white;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Footer Styles */
+.footer-retro {
+    background-color: var(--surface-dim);
+    border-top: 2px solid var(--border-light);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #22c55e;
+}
+
+.footer-link {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--secondary-custom);
+    text-decoration: underline;
+}
+
+.small-text {
+    font-size: 0.75rem;
+}
+
+.small-font-window {
+    font-size: 0.875rem;
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+.h-4px {
+    height: 4px;
+}
+
+.letter-spacing-wide {
+    letter-spacing: 0.1em;
+}
+
+.h-256px {
+    height: 256px;
+}

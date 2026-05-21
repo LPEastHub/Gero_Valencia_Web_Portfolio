@@ -1,0 +1,56 @@
+[
+    {  
+        "id": 1,
+        "title": "E-commerce API Documentation",
+        "description": "Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management.\n Documented Backend API published publicly using Postman.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAw2SoV9mUONZ6gS44_V7EhryR3p_6SAvYmBDoSsQfcAoRKlh-LHwuVWSiHvYTzPIHVWFmfRrWQe62D4ATyyWKPgfQznnzDXXDI-GuGKGF2OskM34p_zi_HacqXn2imdclJsSIEDGy2q9pg6SI8JS0OHDTDqmZfLs9x5XfbLvP5hiykknw8_rR-6jgUFpiaASadGAs4ipPlx0FWIG5l63SKjtygfGHsIF4iIMh4photPoX5U-W1-C47UWK1u8IM_E3LwsHV6YvtqQ9Z"
+    },
+    {
+        "id": 2,
+        "title": "COURSE BOOKING API",
+        "description": "RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB9YiOE15-9XtP3hH1R_tH_m-NjdErxHtAcSVO-kl245JxbbqTeDWiyQfwuobpjyS7lEohxkUM5euq9hi9P5LHp3Rm2IeUvwjfFd7cn-zd3R_jQkiAQACNEMfALAyTK9zZW1AeZ8rAaQQFFZZ3kgBWnVUUMDonlroKazFrPLmGeck8EZvnkm4Yi8Q0j5DoXg8-j03J7ujuwutOvbh_ZIvflLsGRExuYrLXpsk_YqntAaqyusq_12i1RLJJuZ7KHzrdTII0A5B5BZaTW"
+    },
+    {
+        "id": 3,
+        "title": "COURSE APP",
+        "description": "A MERN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC3hozL-n9ZLbbRh-YBj3y_zdVICvHrBn_Gd6Dkt6W5b-ZoqysglGVcRBZPbNBYbCSBAplNbmpcKwzjYkeXQm5_rj53fpVNjj5_2W6aBVGhJ7cZljSmVfTPq5BwoJ_nozJMZFZD9yaY3lrxw-xoGEXGFwsdEiQ6XmaTkIr4A1HbuP-wG1DeS0TVn1srtF_n_V4KrSnrxdANut5jYMoN9jM3Rz-ORoUquS2Q-qL9dGfDUsrfEe0Cbv3u8aOTg0SEkSObx_JF31FNMbCE"
+    },
+    {
+        "id": 4,
+        "title": "E-COMMERCE APP",
+        "description": "MERN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCKovG3hdUL8-5X60Y2RDn9KKQL5vqyVYiQJeM3gmna53VDU8dkKzcG1Hc_opPFTz0abc7ZDxQZhozGc5FUYYT64GrsS5OdvuWLXRsjymy-m6RMa6b4GveAhE_4xK5tY9JsynuDKxtNJds2XipSb-MDmhZbS9BnHPgJTdb1HkmBNRCZ29EDBLe65lqL6KH0FMp_HDVG7aGDzHBa8h6W_MEHNmF3WaN-nmhEpKN9DxmXinll4x4b3nMyeOa0EhEVm2tjcRRN8CH79z_5"
+    },
+    {
+        "id": 5,
+        "title": "AIRLINE PROTOTYPE",
+        "description": "Side Project: Interactive prototype simulating end-to-end airline booking functionalities, including flight search, reservation, payment processing, and real-time ticket management.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD8CalnqtAsx06Atgc3fIPD1vjKK40qcGu6IohITUmgLNaaxnS7jCN_eoir5dV97toEXsahwwFkX5lAoAMyN_lI3HjiczE4L57qLRr1fr8IZSrIoJkZeSogF4LqG27ItGNgTRuEdwmss3kUWy-9T__rm7pxNmrPFvO2xE1YcPnwUir_zXBrfNwj9X2g4do8ZLpNRUvCbG4WdN-31xAqG6UwyQjNNGqBMqnZs12jNqffgQ6JTJ8P5EMSijqsKZUhEwNfgsM15EJwgmyc"
+    },
+    {
+        "id": 6,
+        "title": "AIRLINE MOCKUP",
+        "description": "Side Project: Conceptual design showcasing an intuitive UI for flight search, seat selection, and booking confirmation, focusing on user experience and workflow efficiency.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDcoKdfsGwR4HmmV6IsKe7ljyvvhhpgBPq8NwGhjh_UwPCJlfsgCWd7dnrajg122wjsNH9uVnIOX-RIpQ2Pq6r_lLjBeOCtPIRP6Yg67h6M9_eFRF--v0vZlLHDeEU9T5dFmemyvR6EIrBRK3g7ep_tcThDk36uLreMaCQjBgx2U6846NkqkWbDDfSRQDu7pW4USWawbHTK1d2s7KBaB-EwsUHoBf7HMie7TN4Blvyc4F7yZDA7jv1Fe-7k0ZclRCeQIdYJNmGtZUrR"
+    },
+    {
+        "id": 7,
+        "title": "CAPSTONE PROJECT 1",
+        "description": "First Capstone Project. Comprehensive full-stack application built during the intensive short course program demonstrating end-to-end development skills.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB5IPvftf54D4fs7Twx8w1mBRi3fNfubTcg3nQC_hxPyGC6svQKj0blPCdErz3mlHowHJz_SaaR4_uibJ-U0efmc7JzTiianzu5s3aBAklVeKa9vfA2c6yaFVGaGXeHLYC8Fi4iR4biO06v5Bcmaz25w46Zed6CNW9bfYqSQKGGTVIbnDfpLKvCZNZCpV6wwV33dCph1YdQQQRbvaSFFAr5dHKT3SELo-VB9gd9xPVJC5w6OoisIKCzuBCNMO7-6_CrGZfwTf4km01O"
+    },
+    {
+        "id": 8,
+        "title": "CAPSTONE PROJECT 2",
+        "description": "Second Capstone Project. Advanced web application focusing on complex state management, database interactions, and secure user data handling.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB5IPvftf54D4fs7Twx8w1mBRi3fNfubTcg3nQC_hxPyGC6svQKj0blPCdErz3mlHowHJz_SaaR4_uibJ-U0efmc7JzTiianzu5s3aBAklVeKa9vfA2c6yaFVGaGXeHLYC8Fi4iR4biO06v5Bcmaz25w46Zed6CNW9bfYqSQKGGTVIbnDfpLKvCZNZCpV6wwV33dCph1YdQQQRbvaSFFAr5dHKT3SELo-VB9gd9xPVJC5w6OoisIKCzuBCNMO7-6_CrGZfwTf4km01O"
+    },
+    {
+        "id": 9,
+        "title": "CAPSTONE PROJECT 3",
+        "description": "Final Capstone Project. The culminating platform of the program, incorporating modern architectural patterns, automated deployments, and API integrations.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB5IPvftf54D4fs7Twx8w1mBRi3fNfubTcg3nQC_hxPyGC6svQKj0blPCdErz3mlHowHJz_SaaR4_uibJ-U0efmc7JzTiianzu5s3aBAklVeKa9vfA2c6yaFVGaGXeHLYC8Fi4iR4biO06v5Bcmaz25w46Zed6CNW9bfYqSQKGGTVIbnDfpLKvCZNZCpV6wwV33dCph1YdQQQRbvaSFFAr5dHKT3SELo-VB9gd9xPVJC5w6OoisIKCzuBCNMO7-6_CrGZfwTf4km01O"
+    }
+]
