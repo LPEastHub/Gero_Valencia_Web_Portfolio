@@ -11,7 +11,7 @@
 
     // Form State
     const email = ref("");
-    const subject = ref("Project Inquiry"); // Default value matching your placeholder
+    const subject = ref("Project Inquiry"); 
     const message = ref("");
     const isLoading = ref(false);
 
@@ -21,51 +21,53 @@
     const recaptchaToken = ref('');
 
     const submitForm = async () => {
-    if (!recaptchaToken.value) {
-        notyf.error('Please verify that you are not a robot.');
-        return;
-    }
-
-    isLoading.value = true;
-
-    try {
-        // Use FormData instead of a JSON object
-        const formData = new FormData();
-        formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-        formData.append("subject", subject.value);
-        formData.append("email", email.value);
-        formData.append("message", message.value);
-        formData.append("g-recaptcha-response", recaptchaToken.value);
-
-        // Send the FormData directly
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData 
-            // IMPORTANT: Do NOT include 'Content-Type' headers here. 
-            // The browser will automatically set it to 'multipart/form-data' with the correct boundary.
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            notyf.success("Message sent successfully!");
-            clearForm();
-        } else {
-            notyf.error(result.message || "Failed to send message.");
+        // 1. Frontend Check: Make sure they clicked the checkbox
+        if (!recaptchaToken.value) {
+            notyf.error('Please verify that you are not a robot.');
+            return;
         }
 
-    } catch (error) {
-        console.error(error);
-        notyf.error("Failed to send message");
-    } finally {
-        isLoading.value = false;
-        resetRecaptcha();
-    }
+        isLoading.value = true;
+
+        try {
+            const formData = new FormData();
+            formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+            formData.append("subject", subject.value);
+            formData.append("email", email.value);
+            formData.append("message", message.value);
+            
+            // 2. Free Backend Protection: Add the invisible honeypot field
+            formData.append("botcheck", "");
+
+            // 3. THE FIX: We purposefully DO NOT append "g-recaptcha-response" here.
+            // This bypasses the Web3Forms Pro Plan error entirely.
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData 
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                notyf.success("Message sent successfully!");
+                clearForm();
+            } else {
+                notyf.error(result.message || "Failed to send message.");
+            }
+
+        } catch (error) {
+            console.error(error);
+            notyf.error("Failed to send message");
+        } finally {
+            isLoading.value = false;
+            resetRecaptcha();
+        }
     }
 
     const clearForm = () => {
         email.value = "";
-        subject.value = "";
+        subject.value = "Project Inquiry";
         message.value = "";
     };
 
@@ -130,6 +132,8 @@
                 </div>
                 
                 <form @submit.prevent="submitForm" class="p-4 bg-surface-container-low d-flex flex-column gap-3 beveled-in">
+                    <input type="checkbox" name="botcheck" class="d-none" style="display: none;">
+
                     <div class="d-flex flex-column gap-1">
                         <label class="text-xs fw-bold text-uppercase" for="emailInput">From:</label>
                         <input id="emailInput" v-model="email" class="form-control-retro beveled-in px-2 py-1" placeholder="your_email@provider.com" type="email" required/>
